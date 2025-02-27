@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: #222;
+    color: white;
+    margin: 0;
+}
+.setup-container {
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+label {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+input {
+    font-size: 1.5em;
+    width: 80px;
+    text-align: center;
+}
+.setup-container button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background: limegreen;
+    color: white;
+    border-radius: 5px;
+}
+.timer-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background 0.5s;
+    flex-direction: column;
+}
+.progress-bar {
+    height: 100vh;
+    background: green;
+    width: 100%;
+    transition: width 1s linear, background 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.timer-text {
+    position: absolute;
+    font-size: 10vw;
+    color: white;
+    font-weight: bold;
+}
+.controls {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+button {
+    font-size: 2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: limegreen;
+    color: white;
+    border-radius: 5px;
+}
+.secondary-btn {
+    font-size: 1.2em;
+    background: #555;
+    color: white;
+}
+.secondary-btn:hover {
+    background: #777;
+}
