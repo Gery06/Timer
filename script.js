@@ -42,17 +42,20 @@ function updateTimer() {
 }
 
 function startFlashing() {
-    // Aggiungi la classe flash-red all'elemento che deve lampeggiare (il timer e il fondo)
     let timerScreen = document.getElementById('timerScreen');
     let timerText = document.getElementById('timerText');
 
-    // Aggiungi la classe flash-red al fondo
-    timerScreen.classList.add('flash-red');
+    // Rimuovi temporaneamente la classe per forzare il riavvio dell'animazione
+    timerScreen.classList.remove('flash-red');
+    timerText.classList.remove('flash-red');
     
-    // Facoltativamente, aggiungi la classe anche al testo per farlo lampeggiare (se desiderato)
-    timerText.classList.add('flash-red');
-    
-    // Rimuovi il timer dal ciclo e imposta il testo a "FINE TEMPO"
+    // Ritardiamo leggermente l'aggiunta della classe per forzare l'animazione
+    setTimeout(function() {
+        timerScreen.classList.add('flash-red');
+        timerText.classList.add('flash-red');
+    }, 50); // Ritardo di 50ms per forzare il riavvio dell'animazione
+
+    // Cambia il testo a "FINE TEMPO"
     timerText.textContent = 'FINE TEMPO';
 }
 
