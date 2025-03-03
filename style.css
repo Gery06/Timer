@@ -5,21 +5,26 @@ body {
     color: white;
     margin: 0;
 }
+
 .setup-container {
     padding: 20px;
 }
+
 h1 {
     margin-bottom: 20px;
 }
+
 label {
     font-size: 1.5em;
     margin-right: 10px;
 }
+
 input {
     font-size: 1.5em;
     width: 80px;
     text-align: center;
 }
+
 .setup-container button {
     font-size: 1.5em;
     padding: 10px 20px;
@@ -30,6 +35,7 @@ input {
     color: white;
     border-radius: 5px;
 }
+
 .timer-container {
     display: none;
     position: fixed;
@@ -45,29 +51,33 @@ input {
     transition: background 0.5s;
     flex-direction: column;
 }
+
 .progress-bar {
     height: 100vh;
     background: green;
     width: 100%;
-    transition: width 1s linear, background 0.5s;
+    transition: width 1s linear;
     position: absolute;
     left: 0;
     top: 0;
 }
+
 .timer-text {
     position: absolute;
     font-size: 10vw;
     color: white;
     font-weight: bold;
 }
+
 .controls {
     position: fixed;
-    bottom: 50px;
-    width: 100%;
+    bottom: 10%;
+    width: 90%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+
 button {
     font-size: 2em;
     padding: 10px 20px;
@@ -77,11 +87,37 @@ button {
     color: white;
     border-radius: 5px;
 }
-.secondary-btn {
+
+.small-btn {
     font-size: 1.2em;
-    background: #555;
-    color: white;
+    padding: 5px 10px;
 }
-.secondary-btn:hover {
-    background: #777;
+
+.flash-red {
+    animation: flash 0.5s infinite alternate; 
+}
+
+@keyframes flash {
+    0% { background: red; }
+    100% { background: black; }
+}
+
+@media (max-width: 768px) {
+    .setup-container {
+        padding: 10px;
+    }
+    h1, label, input, button {
+        font-size: 1.2em;
+    }
+    .timer-text {
+        font-size: 15vw;
+    }
+    .controls {
+        bottom: 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    button {
+        font-size: 1.5em;
+    }
 }
