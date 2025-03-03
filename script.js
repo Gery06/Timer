@@ -42,8 +42,11 @@ function updateTimer() {
 }
 
 function startFlashing() {
-    document.getElementById('timerScreen').classList.add('flash-red');
+    document.getElementById('timerScreen').classList.add('flash-red'); // Questa riga è corretta.
+    // Aggiungi questa riga per fare in modo che anche il colore del testo cambi, se vuoi che anche il testo lampeggi:
+    document.getElementById('timerText').classList.add('flash-red'); 
 }
+
 
 function reimpostaTimer() {
     location.reload();
