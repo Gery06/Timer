@@ -98,9 +98,14 @@ button {
 }
 
 @keyframes flash {
-    0% { background: red; }
-    100% { background: black; }
+    0% {
+        background: red;
+    }
+    100% {
+        background: black;
+    }
 }
+
 
 
 @media (max-width: 768px) {
