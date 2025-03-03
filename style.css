@@ -102,6 +102,7 @@ button {
     100% { background: black; }
 }
 
+
 @media (max-width: 768px) {
     .setup-container {
         padding: 10px;
