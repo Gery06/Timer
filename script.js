@@ -42,10 +42,20 @@ function updateTimer() {
 }
 
 function startFlashing() {
-    document.getElementById('timerScreen').classList.add('flash-red'); // Questa riga è corretta.
-    // Aggiungi questa riga per fare in modo che anche il colore del testo cambi, se vuoi che anche il testo lampeggi:
-    document.getElementById('timerText').classList.add('flash-red'); 
+    // Aggiungi la classe flash-red all'elemento che deve lampeggiare (il timer e il fondo)
+    let timerScreen = document.getElementById('timerScreen');
+    let timerText = document.getElementById('timerText');
+
+    // Aggiungi la classe flash-red al fondo
+    timerScreen.classList.add('flash-red');
+    
+    // Facoltativamente, aggiungi la classe anche al testo per farlo lampeggiare (se desiderato)
+    timerText.classList.add('flash-red');
+    
+    // Rimuovi il timer dal ciclo e imposta il testo a "FINE TEMPO"
+    timerText.textContent = 'FINE TEMPO';
 }
+
 
 
 function reimpostaTimer() {
